@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 
 public class ColetarItens : MonoBehaviour {
 
+    public static bool coletouChave;
     public static int qntChaves;
     private int qntDiamantes;
     public Text qntDiamantestext, qntChavestext;
@@ -33,6 +34,7 @@ public class ColetarItens : MonoBehaviour {
         {
             collision.gameObject.SetActive(false);
             qntChaves++;
+            coletouChave = true;
         }
     }
     void SetcontadorChaves()
