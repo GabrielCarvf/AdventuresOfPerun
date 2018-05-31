@@ -22,6 +22,6 @@ public class GameOver : MonoBehaviour {
 
     void TelaPrincipal()
     {
-        SceneManager.LoadScene("Principal");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

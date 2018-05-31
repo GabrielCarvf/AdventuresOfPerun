@@ -79,6 +79,6 @@ public class Heroi : MonoBehaviour
     
     void TelaGameOver()
     {
-        SceneManager.LoadScene("TelaGameOver");        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }   
 }
