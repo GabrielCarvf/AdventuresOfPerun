@@ -68,6 +68,9 @@ public class Heroi : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 110));
             animator.SetBool("NoChao", false);
+            var audio = GetComponent<AudioSource>();
+            if (!GetComponent<AudioSource>().isPlaying)
+                audio.Play();
         }        
     }
 
