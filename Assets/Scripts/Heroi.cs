@@ -9,6 +9,7 @@ public class Heroi : MonoBehaviour
     private bool noChao = false;
     private float axis;
     private float chaoCheckRaio = 0.2f;
+    public static bool fadeOut = false;
     public float MaxVelocidade = 10;   
     public Transform ChaoCheck;    
     public LayerMask OQueEChao;   
@@ -17,6 +18,7 @@ public class Heroi : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        fadeOut = false;
     }
 
     void FixedUpdate()
@@ -59,7 +61,8 @@ public class Heroi : MonoBehaviour
     {
         if (GetComponent<Rigidbody2D>().position.y < -6)
         {
-            Invoke("TelaGameOver", 1f);          
+            Invoke("TelaGameOver", 1f);
+            fadeOut = true;
         }
         if (noChao && Input.GetButton("Jump"))
         {
