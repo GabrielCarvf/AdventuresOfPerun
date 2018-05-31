@@ -20,11 +20,10 @@ public class AudioManager : MonoBehaviour {
 
 	void Start()
 	{
-		Play("Tema"); 
+		Play("Tema");
 	}
 
-	
-	public void Play (string name)
+    public void Play (string name)
 	{
 		Sound s = Array.Find (sounds, sound => sound.name == name);
 		if (s == null) 
@@ -35,4 +34,5 @@ public class AudioManager : MonoBehaviour {
 			
 		s.source.Play ();
 	}
+
 }

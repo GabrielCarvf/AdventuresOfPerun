@@ -12,7 +12,8 @@ public class Heroi : MonoBehaviour
     public static bool fadeOut = false;
     public float MaxVelocidade = 10;   
     public Transform ChaoCheck;    
-    public LayerMask OQueEChao;   
+    public LayerMask OQueEChao;
+    private Collider2D collider;
 
     // Use this for initialization
     void Start()
@@ -68,10 +69,18 @@ public class Heroi : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 110));
             animator.SetBool("NoChao", false);
+
             var audio = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)
                 audio.Play();
-        }        
+        }
+        /*
+        if(collider.tag == "chave")
+        {
+            var audioChave = GetComponent<AudioSource>();
+            if (!GetComponent<AudioSource>().isPlaying)
+                audioChave.Play();
+        }*/
     }
 
     void Vire()
