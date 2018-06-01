@@ -14,7 +14,7 @@ public class BauOrientadaAObjeto : MonoBehaviour
 
     private void Start()
     {
-        animator2 = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
     private void Update()
     {

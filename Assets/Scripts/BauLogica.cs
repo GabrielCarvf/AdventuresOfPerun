@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class BauLogica : MonoBehaviour {
+public class BauLogica : MonoBehaviour
+{
 
     Animator animator;
     public Transform PersonagemChek;
@@ -37,6 +38,6 @@ public class BauLogica : MonoBehaviour {
     }
     void DefinirTexto()
     {
-        Logicatext.text = "Logica";
+        Logicatext.text = "Lógica";
     }
 }

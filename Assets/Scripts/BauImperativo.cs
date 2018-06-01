@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class BauImperativa : MonoBehaviour {
+public class BauImperativo : MonoBehaviour
+{
 
-    Animator animator;    
+    Animator animator;
     public Transform PersonagemChek;
     public LayerMask EhPersonagem;
     public Text Imperativatext;
@@ -13,8 +14,8 @@ public class BauImperativa : MonoBehaviour {
 
     private void Start()
     {
-        animator = GetComponent<Animator>();        
-    }    
+        animator = GetComponent<Animator>();
+    }
     private void Update()
     {
         personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
@@ -28,15 +29,15 @@ public class BauImperativa : MonoBehaviour {
             var audioBau = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
-        }               
+        }
     }
-   protected void DiminuirChaves()
+    protected void DiminuirChaves()
     {
-        if(bauAberto == false)
-        ColetarItens.qntChaves = ColetarItens.qntChaves - 1;
+        if (bauAberto == false)
+            ColetarItens.qntChaves = ColetarItens.qntChaves - 1;
     }
     void DefinirTexto()
-    {        
+    {
         Imperativatext.text = "Imperativa";
     }
 }

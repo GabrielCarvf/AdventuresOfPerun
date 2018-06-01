@@ -12,6 +12,10 @@ public class BauFuncional : MonoBehaviour
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
 
+    public BauFuncional()
+    {
+    }
+
     private void Start()
     {
         animator = GetComponent<Animator>();
