@@ -28,7 +28,6 @@ public class Heroi : MonoBehaviour
         animator.SetBool("NoChao", noChao);
 
         axis = Input.GetAxis("Horizontal");
-
         if (axis > 0 && !ladoDireito)
             Vire();
         if (axis < 0 && ladoDireito)
@@ -74,24 +73,13 @@ public class Heroi : MonoBehaviour
             if (!GetComponent<AudioSource>().isPlaying)
                 audio.Play();
         }
-        /*
-        if(collider.tag == "chave")
-        {
-            var audioChave = GetComponent<AudioSource>();
-            if (!GetComponent<AudioSource>().isPlaying)
-                audioChave.Play();
-        }*/
     }
-
     void Vire()
     {
         ladoDireito = !ladoDireito;
-
         Vector2 novoScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-
         transform.localScale = novoScale;
-    }
-    
+    }    
     void TelaGameOver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

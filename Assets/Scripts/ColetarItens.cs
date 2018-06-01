@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Audio;
 
 public class ColetarItens : MonoBehaviour {
 
@@ -13,6 +10,7 @@ public class ColetarItens : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+        coletouChave = false;
         qntDiamantes = 0;
         qntChaves = 0;
 	}
