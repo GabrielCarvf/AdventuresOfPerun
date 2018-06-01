@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Bau : MonoBehaviour {
+public class BauImperativa : MonoBehaviour {
 
     Animator animator;    
     public Transform PersonagemChek;
     public LayerMask EhPersonagem;
-    public Text JavaScripttext;
+    public Text Imperativatext;
     private bool bauAberto = false;
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
@@ -37,6 +37,6 @@ public class Bau : MonoBehaviour {
     }
     void DefinirTexto()
     {        
-        JavaScripttext.text = "JavaScript";       
+        Imperativatext.text = "Imperativa";
     }
 }
