@@ -25,6 +25,9 @@ public class Bau : MonoBehaviour {
             animator.SetBool("abrirBau", true);
             DefinirTexto();
             bauAberto = true;
+            var audioBau = GetComponent<AudioSource>();
+            if (!GetComponent<AudioSource>().isPlaying)
+                audioBau.Play();
         }               
     }
    protected void DiminuirChaves()
