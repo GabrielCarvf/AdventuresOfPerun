@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Bau : MonoBehaviour {
+public class BauImperativo : MonoBehaviour
+{
 
-    Animator animator;    
+    Animator animator;
     public Transform PersonagemChek;
     public LayerMask EhPersonagem;
-    public Text JavaScripttext;
+    public Text Imperativatext;
     private bool bauAberto = false;
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();        
-    }    
+        animator = GetComponent<Animator>();
+    }
     private void Update()
     {
         personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
@@ -28,15 +29,15 @@ public class Bau : MonoBehaviour {
             var audioBau = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
-        }               
+        }
     }
-   protected void DiminuirChaves()
+    protected void DiminuirChaves()
     {
-        if(bauAberto == false)
-        ColetarItens.qntChaves = ColetarItens.qntChaves - 1;
+        if (bauAberto == false)
+            ColetarItens.qntChaves = ColetarItens.qntChaves - 1;
     }
     void DefinirTexto()
-    {        
-        JavaScripttext.text = "JavaScript";       
+    {
+        Imperativatext.text = "Imperativa";
     }
 }
