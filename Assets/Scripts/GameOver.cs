@@ -8,13 +8,22 @@ public class GameOver : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            TelaPrincipal();
+            ReturnToGame();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ReturnToMenu();
         }
     }
 
-    void TelaPrincipal()
+    void ReturnToMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
+
+    void ReturnToGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
