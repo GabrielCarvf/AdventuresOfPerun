@@ -19,19 +19,18 @@ public class BauOrientadaAObjeto : MonoBehaviour
     }
     private void Update()
     {
-
         personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
         OrientadaAObjetosText = false;
         if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0))
         {
             DiminuirChaves();
-            animator.SetBool("abrirBau", true);
             DefinirTexto();
-            bauAberto = true;
+            animator.SetBool("abrirBau", true);
+            OrientadaAObjetosText = true;
             var audioBau = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
-            OrientadaAObjetosText = true;
+            bauAberto = true;
         }
     }
     protected void DiminuirChaves()

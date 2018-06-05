@@ -5,13 +5,14 @@ using UnityEngine;
 public class TextOrientadaAObjeto : MonoBehaviour {
 
     public GameObject OrientadaAObjetoText;
+    private bool aberto = false;
     	
 	// Update is called once per frame
 	void Update () {
 
         if(BauOrientadaAObjeto.OrientadaAObjetosText)
         {
-            Invoke("MostrarTexto", 0.5f);
+            Invoke("MostrarTexto", 0.3f);
         }
         else if(Input.GetKeyDown(KeyCode.Escape))
         {
@@ -21,9 +22,13 @@ public class TextOrientadaAObjeto : MonoBehaviour {
 
     void MostrarTexto()
     {
-        OrientadaAObjetoText.SetActive(true);
-        Time.timeScale = 0f;
-        BauOrientadaAObjeto.OrientadaAObjetosText = false;
+        if (!aberto) {
+
+            OrientadaAObjetoText.SetActive(true);
+            Time.timeScale = 0f;
+            BauOrientadaAObjeto.OrientadaAObjetosText = false;
+            aberto = true;
+        }
     }
     void Voltar()
     {
