@@ -8,6 +8,7 @@ public class BauOrientadaAObjeto : MonoBehaviour
     public Transform PersonagemChek;
     public LayerMask EhPersonagem;
     public Text OrientadaAObjetotext;
+    public static bool OrientadaAObjetosText = false;
     private bool bauAberto = false;
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
@@ -18,8 +19,9 @@ public class BauOrientadaAObjeto : MonoBehaviour
     }
     private void Update()
     {
-        personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
 
+        personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
+        OrientadaAObjetosText = false;
         if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0))
         {
             DiminuirChaves();
@@ -29,6 +31,7 @@ public class BauOrientadaAObjeto : MonoBehaviour
             var audioBau = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
+            OrientadaAObjetosText = true;
         }
     }
     protected void DiminuirChaves()
