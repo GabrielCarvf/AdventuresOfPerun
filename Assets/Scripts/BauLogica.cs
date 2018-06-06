@@ -8,6 +8,7 @@ public class BauLogica : MonoBehaviour
     public Transform PersonagemChek;
     public LayerMask EhPersonagem;
     public Text Logicatext;
+    public static bool logicaText = false;
     private bool bauAberto = false;
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
@@ -19,16 +20,18 @@ public class BauLogica : MonoBehaviour
     private void Update()
     {
         personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
+        logicaText = false;
 
         if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0))
         {
             DiminuirChaves();
-            animator.SetBool("abrirBau", true);
             DefinirTexto();
-            bauAberto = true;
+            animator.SetBool("abrirBau", true);
+            logicaText = true;
             var audioBau = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
+            bauAberto = true;
         }
     }
     protected void DiminuirChaves()

@@ -8,6 +8,7 @@ public class BauImperativo : MonoBehaviour
     public Transform PersonagemChek;
     public LayerMask EhPersonagem;
     public Text Imperativatext;
+    public static bool imperativaText = false;
     private bool bauAberto = false;
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
@@ -19,12 +20,14 @@ public class BauImperativo : MonoBehaviour
     private void Update()
     {
         personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
+        imperativaText = false;
 
         if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0))
         {
             DiminuirChaves();
-            animator.SetBool("abrirBau", true);
             DefinirTexto();
+            animator.SetBool("abrirBau", true);
+            imperativaText = true;
             bauAberto = true;
             var audioBau = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)

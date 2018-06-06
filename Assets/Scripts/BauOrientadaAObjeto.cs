@@ -8,7 +8,7 @@ public class BauOrientadaAObjeto : MonoBehaviour
     public Transform PersonagemChek;
     public LayerMask EhPersonagem;
     public Text OrientadaAObjetotext;
-    public static bool OrientadaAObjetosText = false;
+    public static bool OrientadaAObjetoText = false;
     private bool bauAberto = false;
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
@@ -20,13 +20,13 @@ public class BauOrientadaAObjeto : MonoBehaviour
     private void Update()
     {
         personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
-        OrientadaAObjetosText = false;
+        OrientadaAObjetoText = false;
         if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0))
         {
             DiminuirChaves();
             DefinirTexto();
             animator.SetBool("abrirBau", true);
-            OrientadaAObjetosText = true;
+            OrientadaAObjetoText = true;
             var audioBau = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
