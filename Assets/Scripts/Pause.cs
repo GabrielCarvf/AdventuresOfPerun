@@ -5,21 +5,31 @@ using UnityEngine;
 public class Pause : MonoBehaviour {
 
     public GameObject PainelPause;
+    public GameObject MostarImperativa;
+    public GameObject MostrarOO;
+    public GameObject MostrarFuncional;
+    public GameObject MostrarLogica;
 
     private bool mostrarPause = false;
+    private bool mostrarImperativa = false;
+    private bool mostrarOO = false;
+    private bool mostrarFuncional = false;
+    private bool mostrarLogica = false;
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (mostrarPause == false && Input.GetKeyDown(KeyCode.Escape))
+        if (mostrarPause == false && Input.GetKeyDown(KeyCode.P))
         {
             Invoke("aparecePause", 0.3f);
         }
 
-        if (mostrarPause == true && Input.GetKeyDown(KeyCode.Escape))
+        if (mostrarPause == true && Input.GetKeyDown(KeyCode.P))
         {
             Voltar();
         }
+        
+        
     }
 
     void aparecePause()
@@ -30,6 +40,34 @@ public class Pause : MonoBehaviour {
             mostrarPause = true;
             Time.timeScale = 0f;
         }
+    }
+
+    public void aparecerImperativa()
+    {
+        MostarImperativa.SetActive(true);
+        mostrarImperativa = true;
+        Time.timeScale = 0f;
+    }
+
+    void aparecerOrientadaaObjeto()
+    {
+        MostrarOO.SetActive(true);
+        mostrarOO = true;
+        Time.timeScale = 0f;
+    }
+
+    void aparecerFuncional()
+    {
+        MostrarFuncional.SetActive(true);
+        mostrarFuncional = true;
+        Time.timeScale = 0f;
+    }
+
+    void aparecerLogica()
+    {
+        MostrarLogica.SetActive(true);
+        mostrarLogica = true;
+        Time.timeScale = 0f;
     }
 
     void Voltar()
