@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour {
 
-    public GameObject pause;
+    public GameObject PainelEsquerda;
+    public GameObject PainelDireita;
 
     private bool mostrarPause = false;
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (mostrarPause == false && Input.GetKeyDown(KeyCode.Escape))
         {
             Invoke("aparecePause", 0.3f);
         }
 
-        else if (mostrarPause == true && Input.GetKeyDown(KeyCode.Escape))
+        if (mostrarPause == true && Input.GetKeyDown(KeyCode.Escape))
         {
             Voltar();
         }
@@ -24,16 +25,20 @@ public class Pause : MonoBehaviour {
 
     void aparecePause()
     {
-        if(!mostrarPause)
+        if (!mostrarPause)
         {
-            pause.SetActive(true);
+            PainelDireita.SetActive(true);
+            PainelEsquerda.SetActive(true);
+            mostrarPause = true;
             Time.timeScale = 0f;
         }
     }
 
     void Voltar()
     {
-        pause.SetActive(false);
+        PainelDireita.SetActive(false);
+        PainelEsquerda.SetActive(false);
+        mostrarPause = false;
         Time.timeScale = 1f;
     }
 }
