@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour {
 
-    public GameObject PainelEsquerda;
-    public GameObject PainelDireita;
+    public GameObject PainelPause;
 
     private bool mostrarPause = false;
 	
@@ -27,8 +26,7 @@ public class Pause : MonoBehaviour {
     {
         if (!mostrarPause)
         {
-            PainelDireita.SetActive(true);
-            PainelEsquerda.SetActive(true);
+            PainelPause.SetActive(true);
             mostrarPause = true;
             Time.timeScale = 0f;
         }
@@ -36,8 +34,7 @@ public class Pause : MonoBehaviour {
 
     void Voltar()
     {
-        PainelDireita.SetActive(false);
-        PainelEsquerda.SetActive(false);
+        PainelPause.SetActive(false);
         mostrarPause = false;
         Time.timeScale = 1f;
     }
