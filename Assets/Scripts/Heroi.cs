@@ -64,7 +64,7 @@ public class Heroi : MonoBehaviour
             Invoke("TelaGameOver", 1f);
             fadeOut = true;
         }
-        if (noChao && Input.GetButton("Jump"))
+        if (noChao && Input.GetKey(KeyCode.Space))
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 110));
             animator.SetBool("NoChao", false);
