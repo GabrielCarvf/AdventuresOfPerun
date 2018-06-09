@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class ColetarItens : MonoBehaviour {
 
     public static bool coletouChave = false;
+    public static bool coletouDiamante = false;
     public static int qntChaves;
     private int qntDiamantes;
     public Text qntDiamantestext, qntChavestext;
@@ -27,6 +28,8 @@ public class ColetarItens : MonoBehaviour {
         {
             collision.gameObject.SetActive(false);
             qntDiamantes++;
+            coletouDiamante = true;
+
         }
         if (collision.tag == "chave")
         {
