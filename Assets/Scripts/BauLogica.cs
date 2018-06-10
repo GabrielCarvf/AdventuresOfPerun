@@ -9,6 +9,7 @@ public class BauLogica : MonoBehaviour
     public LayerMask EhPersonagem;
     public Text Logicatext;
     public static bool logicaText = false;
+    public static bool bauLogicaAberto = false;
     private bool bauAberto = false;
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
@@ -32,6 +33,7 @@ public class BauLogica : MonoBehaviour
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
             bauAberto = true;
+            bauLogicaAberto = true;
         }
     }
     protected void DiminuirChaves()

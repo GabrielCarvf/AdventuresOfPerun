@@ -13,7 +13,7 @@ public class ColetarItens : MonoBehaviour {
 	void Start () {
         coletouChave = false;
         qntDiamantes = 0;
-        qntChaves = 0;
+        qntChaves = 4;
 	}
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ public class BauFuncional : MonoBehaviour
     public LayerMask EhPersonagem;
     public Text Funcionaltext;
     public static bool funcionalText = false;
+    public static bool bauFuncionalAberto = false;
     private bool bauAberto = false;
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
@@ -35,6 +36,7 @@ public class BauFuncional : MonoBehaviour
             var audioBau = GetComponent<AudioSource>();
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
+            bauFuncionalAberto = true;
         }
     }
     protected void DiminuirChaves()

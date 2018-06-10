@@ -8,6 +8,7 @@ public class BauOrientadaAObjeto : MonoBehaviour
     public Transform PersonagemChek;
     public LayerMask EhPersonagem;
     public Text OrientadaAObjetotext;
+    public static bool bauOrientadaObjetoAberto = false;
     public static bool OrientadaAObjetoText = false;
     private bool bauAberto = false;
     private bool personagemPerto = false;
@@ -31,6 +32,7 @@ public class BauOrientadaAObjeto : MonoBehaviour
             if (!GetComponent<AudioSource>().isPlaying)
                 audioBau.Play();
             bauAberto = true;
+            bauOrientadaObjetoAberto = true;
         }
     }
     protected void DiminuirChaves()
