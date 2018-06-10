@@ -23,7 +23,7 @@ public class BauLogica : MonoBehaviour
         personagemPerto = Physics2D.OverlapCircle(PersonagemChek.position, bauCheckRaio, EhPersonagem);
         logicaText = false;
 
-        if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0))
+        if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0) && !bauAberto)
         {
             DiminuirChaves();
             DefinirTexto();

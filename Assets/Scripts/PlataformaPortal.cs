@@ -6,7 +6,6 @@ public class PlataformaPortal : MonoBehaviour {
 
     Animator animator;
     private bool portal = false;
-    public GameObject collider1, collider2;
 
     // Use this for initialization
     void Start () {
@@ -19,11 +18,14 @@ public class PlataformaPortal : MonoBehaviour {
 
         if(BauOrientadaAObjeto.bauOrientadaObjetoAberto && BauLogica.bauLogicaAberto && BauFuncional.bauFuncionalAberto && BauImperativo.bauImperativoAberto)
         {
-            portal = true;
-            animator.SetBool("Portal", portal);
-            collider1.SetActive(true);
-            collider2.SetActive(true);
+            Invoke("ativarPlataforma", 1f);
         }
-
     }
+
+    void ativarPlataforma()
+    {
+        portal = true;
+        animator.SetBool("Portal", portal);
+    }
+
 }
