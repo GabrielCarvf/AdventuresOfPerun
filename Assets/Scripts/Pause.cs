@@ -49,21 +49,21 @@ public class Pause : MonoBehaviour {
         Time.timeScale = 0f;
     }
 
-    void aparecerOrientadaaObjeto()
+    public void aparecerOrientadaaObjeto()
     {
         MostrarOO.SetActive(true);
         mostrarOO = true;
         Time.timeScale = 0f;
     }
 
-    void aparecerFuncional()
+    public void aparecerFuncional()
     {
         MostrarFuncional.SetActive(true);
         mostrarFuncional = true;
         Time.timeScale = 0f;
     }
 
-    void aparecerLogica()
+    public void aparecerLogica()
     {
         MostrarLogica.SetActive(true);
         mostrarLogica = true;
