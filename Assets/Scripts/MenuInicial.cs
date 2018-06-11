@@ -14,6 +14,7 @@ public class MenuInicial : MonoBehaviour {
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
+            FecharSobre();
             FecharCreditos();
         }
     }
@@ -31,4 +32,15 @@ public class MenuInicial : MonoBehaviour {
         animator.SetBool("FecharCreditos", true);
         animator.SetBool("AbrirCreditos", false);
     }
+    public void MostrarSobre()
+    {
+        animator.SetBool("AbrirSobre", true);
+        animator.SetBool("Fecharsobre", false);
+    }
+    public void FecharSobre()
+    {
+        animator.SetBool("FecharSobre", true);
+        animator.SetBool("AbrirSobre", false);
+    }
+
 }
