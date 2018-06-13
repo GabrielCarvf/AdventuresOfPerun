@@ -30,7 +30,6 @@ public class BauLogica : MonoBehaviour
         if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0) && !bauAberto)
         {
             DiminuirChaves();
-            DefinirTexto();
             animator.SetBool("abrirBau", true);
             logicaText = true;
             var audioBau = GetComponent<AudioSource>();
@@ -44,9 +43,5 @@ public class BauLogica : MonoBehaviour
     {
         if (bauAberto == false)
             ColetarItens.qntChaves = ColetarItens.qntChaves - 1;
-    }
-    void DefinirTexto()
-    {
-        Logicatext.text = "Lógica";
     }
 }

@@ -30,7 +30,6 @@ public class BauImperativo : MonoBehaviour
         if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0) && !bauAberto)
         {
             DiminuirChaves();
-            DefinirTexto();
             animator.SetBool("abrirBau", true);
             imperativaText = true;
             bauAberto = true;
@@ -44,9 +43,5 @@ public class BauImperativo : MonoBehaviour
     {
         if (bauAberto == false)
             ColetarItens.qntChaves = ColetarItens.qntChaves - 1;
-    }
-    void DefinirTexto()
-    {
-        Imperativatext.text = "Imperativa";
     }
 }

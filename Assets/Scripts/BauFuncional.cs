@@ -29,7 +29,6 @@ public class BauFuncional : MonoBehaviour
         if (personagemPerto && Input.GetKeyDown(KeyCode.E) && (ColetarItens.qntChaves > 0) && !bauAberto)
         {
             DiminuirChaves();
-            DefinirTexto();
             animator.SetBool("abrirBau", true);
             funcionalText = true;
             bauAberto = true;
@@ -43,9 +42,5 @@ public class BauFuncional : MonoBehaviour
     {
         if (bauAberto == false)
             ColetarItens.qntChaves = ColetarItens.qntChaves - 1;
-    }
-    void DefinirTexto()
-    {
-        Funcionaltext.text = "Funcional";
     }
 }
