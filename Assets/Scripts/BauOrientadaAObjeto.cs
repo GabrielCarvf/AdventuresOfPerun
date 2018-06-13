@@ -16,6 +16,10 @@ public class BauOrientadaAObjeto : MonoBehaviour
 
     private void Start()
     {
+        personagemPerto = false;
+        bauAberto = false;
+        OrientadaAObjetoText = false;
+        bauOrientadaObjetoAberto = false;
         animator = GetComponent<Animator>();
     }
     private void Update()

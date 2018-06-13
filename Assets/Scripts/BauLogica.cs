@@ -16,6 +16,10 @@ public class BauLogica : MonoBehaviour
 
     private void Start()
     {
+        personagemPerto = false;
+        bauAberto = false;
+        bauLogicaAberto = false;
+        logicaText = false;
         animator = GetComponent<Animator>();
     }
     private void Update()

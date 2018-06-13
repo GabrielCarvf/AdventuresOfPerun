@@ -35,7 +35,7 @@ public class MenuInicial : MonoBehaviour {
     public void MostrarSobre()
     {
         animator.SetBool("AbrirSobre", true);
-        animator.SetBool("Fecharsobre", false);
+        animator.SetBool("FecharSobre", false);
     }
     public void FecharSobre()
     {

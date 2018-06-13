@@ -11,9 +11,11 @@ public class ColetarItens : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+
+        coletouDiamante = false;
         coletouChave = false;
         qntDiamantes = 0;
-        qntChaves = 4;
+        qntChaves = 0;
 	}
 
     // Update is called once per frame

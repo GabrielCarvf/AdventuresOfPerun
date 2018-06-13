@@ -14,12 +14,12 @@ public class BauFuncional : MonoBehaviour
     private bool personagemPerto = false;
     private float bauCheckRaio = 0.7f;
 
-    public BauFuncional()
-    {
-    }
-
     private void Start()
     {
+        personagemPerto = false;
+        bauAberto = false;
+        bauFuncionalAberto = false;
+        funcionalText = false;
         animator = GetComponent<Animator>();
     }
     private void Update()

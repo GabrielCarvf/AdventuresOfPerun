@@ -16,6 +16,10 @@ public class BauImperativo : MonoBehaviour
 
     private void Start()
     {
+        personagemPerto = false;
+        bauAberto = false;
+        bauImperativoAberto = false;
+        imperativaText = false;
         animator = GetComponent<Animator>();
     }
     private void Update()

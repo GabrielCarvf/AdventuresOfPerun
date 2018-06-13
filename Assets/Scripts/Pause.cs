@@ -10,14 +10,19 @@ public class Pause : MonoBehaviour {
     public GameObject MostrarFuncional;
     public GameObject MostrarLogica;
 
-    private bool mostrarPause = false;
+    public static bool mostrarPause = false;
     private bool mostrarImperativa = false;
     private bool mostrarOO = false;
     private bool mostrarFuncional = false;
     private bool mostrarLogica = false;
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void Start()
+    {
+        mostrarPause = false;
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         if (mostrarPause == false && Input.GetKeyDown(KeyCode.P))
         {

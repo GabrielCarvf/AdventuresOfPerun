@@ -35,7 +35,7 @@ public class TextosParadigmas : MonoBehaviour
         {
             Invoke("MostrarTextoOrientadaAObjeto", 0.3f);
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return))
         {
             Voltar();
         }
