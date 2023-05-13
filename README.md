@@ -25,8 +25,8 @@ Mostrar de forma descontraída e prática os principais paradigmas de programaç
 
 Adventures of Perun:
 
-- Build do jogo para Windows
-- Todas as artes, telas e assets utilizados no desenvolvimento do jogo.
+- Build do jogo para Windows e WebGL
+- Todas as artes, sons, músicas, telas e assets utilizados no desenvolvimento do jogo.
 - Projeto completo do jogo e configurações da plataforma Unity, utilizada para o desenvolvimento.
 
 ## Projeto
@@ -47,11 +47,16 @@ Durante a disciplina surgiu a necessidade de apresentar um projeto onde era nece
   <br/>
 </div>
 
-Atualmente temos apenas uma build para o sistema operacional Windows.
+- **Rodando de forma nativa do windows:** 
+  - Para rodar o jogo com essa build basta baixar a pasta `Windows` no caminho `./Compilações/Windows/` do repositório e executar o arquivo `AdventureOfPerun.exe` no seu computador.
 
-Para jogar basta baixar a pasta `Windows` dentro do repositório e executar o arquivo `Windows.exe`.
+  <br>
 
-> **AVISO:** O jogo foi desenvolvido em 2018 e a build feita para sistemas baseados em Windows 10. Caso o seu sistema seja mais recente poderá apresentar bugs e inconsistências durante a execução do jogo!
+  - > **AVISO:** O jogo foi desenvolvido em 2018 e a build feita para sistemas baseados em Windows 10. Caso o seu sistema seja mais recente poderá apresentar bugs e inconsistências durante a execução do jogo!
+
+- **Rodando no navegador em um servidor web:** 
+  - Para rodar o jogo no navegador baixe a compilação em `WebGL` na pasta do repositório `./Compilações/WebGL/`;
+  - Execute a compilação usando um servidor web. Caso for rodar na sua máquina recomendo utilizar o [Express](https://expressjs.com/).
 
 <br/>
 
