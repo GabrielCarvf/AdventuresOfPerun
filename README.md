@@ -7,7 +7,7 @@
 <div align="center">
   <h3>Descubra o mundo dos paradigmas</h3>
 
-   [Introdução](#👨🏻‍💻-Introdução) |
+   [Introdução](#Introdução) |
    [Como jogar](#🎮-Como-jogar) |
    [Tecnologias Utilizadas](#🚀-Tecnologias-utilizadas) 
 </div>
