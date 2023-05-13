@@ -7,9 +7,9 @@
 <div align="center">
   <h3>Descubra o mundo dos paradigmas</h3>
 
-   [Introdução](#Objetivo) |
-   [Como jogar](#🎮-Como-jogar) |
-   [Tecnologias Utilizadas](#🚀-Tecnologias-utilizadas) 
+   [Introdução](#-introdução) |
+   [Como jogar](#-como-jogar) |
+   [Tecnologias Utilizadas](#-tecnologias-utilizadas) 
 </div>
 
 
