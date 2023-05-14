@@ -69,5 +69,5 @@ Durante a disciplina surgiu a necessidade de apresentar um projeto onde era nece
 
 Made by
 
-- [**Gabriel Carvalho**](https://github.com/GabrielCarvf) `(UX/UI Designer / Development)` 🚀 [LinkedIn](https://www.linkedin.com/in/gabriel-carvalho-5ba636182//in/annabeatriznf/)
+- [**Gabriel Carvalho**](https://github.com/GabrielCarvf) `(UX/UI Designer / Development)` 🚀 [LinkedIn](https://www.linkedin.com/in/gabriel-carvalho-5ba636182/)
 - [**Felipe Nedopetalski**](https://github.com/fNedopetalski) `(Game Script Writer / Development)` 👻 [LinkedIn](https://www.linkedin.com/in/felipe-nedopetalski-91b93b154/)
